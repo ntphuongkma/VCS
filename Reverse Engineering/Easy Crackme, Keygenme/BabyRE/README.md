@@ -57,3 +57,7 @@ j = 4
 XOR
 00101010 => key[4] = 42
 ```
+![Flag](./flag.jpg)
+```codetype
+Flag: flag{easy_baby_challenge}
+```
