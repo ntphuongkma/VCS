@@ -57,6 +57,17 @@ j = 4
 XOR
 00101010 => key[4] = 42
 ```
+Hoặc script:
+```
+ciperFlag = "bdnpQai|nufimnug"
+key = "flag{"
+flag = []
+
+for j in range(len(key)):
+    flag.append(str(ord(ciperFlag[j])^ord(key[j])))
+    
+print(flag)
+```
 ![Flag](./flag.jpg)
 ```codetype
 Flag: flag{easy_baby_challenge}
