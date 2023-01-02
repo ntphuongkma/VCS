@@ -59,7 +59,7 @@ Nhận thấy chương trình yêu cầu nhập mật khẩu có độ dài >= 2
 
 Check main:
 ```
-v3 = &unk_5E4BE8;
+  v3 = &unk_5E4BE8;
   if ( (int)strlen(a1) < 55 )
     return 0;
   for ( i = 0; i < 122; ++i )
@@ -72,7 +72,7 @@ v3 = &unk_5E4BE8;
 ```
 Check2 main:
 ```
-v8 = 221;
+  v8 = 221;
   v5 = (LPVOID)sub_5E1000((int)&unk_5E4288, 0xDDu, 5);
   v7 = 278;
   v6 = (LPVOID)sub_5E1000((int)&unk_5E4170, 0x116u, 6);
