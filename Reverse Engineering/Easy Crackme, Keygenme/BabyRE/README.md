@@ -16,8 +16,8 @@ Từ Pseudocode ta thấy hàm sub_401020 và hàm sub_401050 là hàm printf v�
 Phần tính toán có thể viết lại như sau:
 ```codetype
 v5 = &cipherFlag[j]
-*v5 = key[j%5]
-v5[1] = key[j - 5*((j+1)/5) + 1]
+*v5 ^= key[j%5]
+v5[1] ^= key[j - 5*((j+1)/5) + 1]
 ```
 Vì flag có format flag{ nên từ đó lần lượt sẽ tìm được các key:
 ```codetype
