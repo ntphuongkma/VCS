@@ -218,5 +218,5 @@ int __cdecl sub_810000(char *a1, int a2, int a3)
 ### Flag
 ![flag](./flag.jpg)
 ```
-vcstraining{Aw3s0me_D4ta_tran5Form4t1oN_Kak4}
+Flag: vcstraining{Aw3s0me_D4ta_tran5Form4t1oN_Kak4}
 ```
