@@ -54,7 +54,9 @@ Ném vào ida để phân tích chương trình
     return 0;
   }
 ```
+
 Nhận thấy chương trình yêu cầu nhập mật khẩu có độ dài >= 294. Sau đó sẽ gọi đến hàm ``` check ``` để kiểm tra mật khẩu nhập vào có đúng hay không. Rồi từ mật khẩu tính toán để gen ra flag.
+
 Check main:
 ```
 v3 = &unk_5E4BE8;
