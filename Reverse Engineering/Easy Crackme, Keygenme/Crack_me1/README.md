@@ -220,7 +220,7 @@ int __cdecl sub_810000(char *a1, int a2, int a3)
 }
 ```
 Func4 sử dụng thuật toán RC4
-### Script to gen flag
+### Script to get password
 ```
 from Crypto.Cipher import ARC4
 from pwn import p32
