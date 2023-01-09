@@ -74,6 +74,7 @@ Hàm check main này xử lý dữ liệu v3 được khởi tạo trong hàm ch
 - f: case switch trong hàm check2 
 - i: index của chuỗi password ta cần tìm
 - inp: data chưa được xử lý
+
 Check2 main:
 ```
   v8 = 221;
