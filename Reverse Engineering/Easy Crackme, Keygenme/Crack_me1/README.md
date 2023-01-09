@@ -70,6 +70,10 @@ Check main:
   }
   return 1;
 ```
+Hàm check main này xử lý dữ liệu v3 được khởi tạo trong hàm check2 theo 4 case. Data mà con trỏ v3 trỏ tới gồm 1 chuỗi dữ liệu gồm:
+- f: case switch trong hàm check2 
+- i: index của chuỗi password ta cần tìm
+- inp: data chưa được xử lý
 Check2 main:
 ```
   v8 = 221;
@@ -122,6 +126,7 @@ Hàm sub_521000 alloc 1 vùng nhớ có size = dwSize sau đó từ địa chỉ
   return v2 == 1 && (*a1 ^ 0x52) == *a2;
 }
 ```
+Func1 kiểm tra a[i] bằng cách xor với 0x20 nếu chẵn hoặc 0x52 nếu lẻ sau đó so sánh với byte trong data
 ### Func2
 ```
 bool __cdecl sub_9D0000(char *a1, unsigned __int16 *a2)
@@ -135,6 +140,7 @@ bool __cdecl sub_9D0000(char *a1, unsigned __int16 *a2)
   return *a2 == v4;
 }
 ```
+Func2 kiểm tra a[i] và a[i+1] bằng cách dịch bit và xỏ với 0x1693 sau đó so sánh với word trong data 
 ### Func3
 ```
 bool __cdecl sub_6D0000(char *a1, unsigned __int8 *a2)
@@ -220,6 +226,20 @@ int __cdecl sub_810000(char *a1, int a2, int a3)
 }
 ```
 Func4 sử dụng thuật toán RC4
+### Script to get data from v3
+```
+data = []
+addr = 0x5E4BE8
+index = 0
+for i in range(366//3):
+    t1 = idc.get_wide_dword(addr+index+0*4)
+    t2 = idc.get_wide_dword(addr+index+1*4)
+    t3 = idc.get_wide_dword(addr+index+2*4)
+    data.append((t1,t2,t3))
+    index += 3*4
+
+print(data)
+```
 ### Script to get password
 ```
 from Crypto.Cipher import ARC4
